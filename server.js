@@ -11,8 +11,6 @@ var app = express();
 
 var dbName='movieDB';
 
-//new app
-//
  var connectionString='mongodb://localhost:27017/'+dbName;
 
 mongoose.connect(connectionString);
