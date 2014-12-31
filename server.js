@@ -11,7 +11,9 @@ var app = express();
 
 var dbName='movieDB';
 
-var connectionString='mongodb://localhost:27017/'+dbName;
+//new app
+//
+ var connectionString='mongodb://localhost:27017/'+dbName;
 
 mongoose.connect(connectionString);
 
@@ -33,6 +35,6 @@ module.exports = app;
 
 app.set('port', process.env.PORT || 8000);
 
-var server = app.listen(app.get('port'), function() {
+app.listen(app.get('port'), function() {
   console.log('Express server listening on port ' + server.address().port);
 });
