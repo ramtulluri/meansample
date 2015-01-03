@@ -21,12 +21,13 @@ app.use(bodyParser.urlencoded());
 app.use('/api', movies);
 
 app.use('/api', express.static(__dirname + '/api'));
-app.use('/client', express.static(__dirname + '/client'));
-app.use('/lib', express.static(__dirname + '/lib'));
+app.use('/www', express.static(__dirname + '/www'));
+app.use('/www/client', express.static(__dirname + '/www/client'));
+app.use('/lib', express.static(__dirname + '/www/lib'));
 
 
 app.get('/', function (req, res) {
-  res.sendfile(__dirname + '/client/views/index.html');
+  res.sendfile(__dirname + '/www/index.html');
 });
 
 module.exports = app;
@@ -34,5 +35,5 @@ module.exports = app;
 app.set('port', process.env.PORT || 8000);
 
 app.listen(app.get('port'), function() {
-  console.log('Express server listening on port ' + server.address().port);
+  console.log('Express server listening on port 8000' );
 });
