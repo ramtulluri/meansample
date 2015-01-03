@@ -1,0 +1,29 @@
+<ion-view title="Add Movie">
+    <ion-content padding="true" scroll="false" class="has-header">
+        <form>
+            <ion-list>
+                <label class="item item-input">
+                    <span class="input-label">Title</span>
+                    <input type="text" ng-model="movie.title" id="title" placeholder="Movie Title Here"/>
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Director</span>
+                    <input type="text" ng-model="movie.director" id="director" placeholder="Who directed the movie?"/>
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Year</span>
+                    <input type="text" ng-model="movie.releaseYear" id="year" placeholder="When was the movie released?"/>
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Genre</span>
+                    <input type="text" ng-model="movie.genre" class="form-control" id="plot" placeholder="Movie genre here"/>
+                </label>
+            </ion-list>
+        </form>
+        <div class="button-bar">
+
+            <button class="button button-positive button-block" ng-click="sumbit">Add Movie</button>
+            <a href="#/movies" class="button button-assertive button-block">Close</a>
+        </div>
+    </ion-content>
+</ion-view>

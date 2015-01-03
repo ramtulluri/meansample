@@ -1,0 +1,58 @@
+<table class="table movietable">
+    <tr>
+        <td><h3>Details for {{movie.title}}</h3></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Movie Title</td>
+        <td>{{movie.title}}</td>
+    </tr>
+    <tr>
+        <td>Director</td>
+        <td>{{movie.director}}</td>
+    </tr>
+    <tr>
+        <td>Release Year</td>
+        <td>{{movie.releaseYear}}</td>
+    </tr>
+    <tr>
+        <td>Movie Genre</td>
+        <td>{{movie.genre}}</td>
+    </tr>
+</table>
+<div>
+    <a class="btn btn-primary" ui-sref="editMovie({id:movie._id})">Edit</a>
+</div>
+
+<ion-view title="View Movie">
+    <ion-content padding="true" scroll="false" class="has-header">
+        <form>
+            <ion-list>
+                <ion-item class="item-thumbnail-left">
+                    <img src="http://ionic-directory.herokuapp.com/pics/Eugene_Lee.jpg">
+                    <h2>First Movie Title</h2>
+                    <p>Nice movie</p>
+                </ion-item>
+                <label class="item item-input">
+                    <span class="input-label">Title</span>
+                    <input type="text" placeholder="">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Year</span>
+                    <input type="date" placeholder="">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Director</span>
+                    <input type="text" placeholder="">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Genre</span><textarea placeholder=""> </textarea>
+                </label>
+            </ion-list>
+        </form>
+        <div class="button-bar">
+            <a href="#/home" class="button button-positive button-block">Save</a>
+            <a href="#/home" class="button button-assertive button-block">Delete</a>
+        </div>
+    </ion-content>
+</ion-view>

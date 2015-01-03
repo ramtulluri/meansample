@@ -1,0 +1,11 @@
+<ion-view title="Movie Manager">
+    <ion-content padding="true" class="has-header">
+
+        <a href="#/movies/new" class="button button-positive button-block">Add New Movie</a>
+
+        <ion-list ng-repeat="movie in movies">
+                <ion-item  href="#/movies/{{movie._id}}/edit">{{movie.title}}</ion-item>
+        </ion-list>
+
+    </ion-content>
+</ion-view>
