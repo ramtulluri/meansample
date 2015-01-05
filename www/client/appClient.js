@@ -3,19 +3,19 @@ var appClient = angular.module('movieManager', ['ionic','ui.router', 'ngResource
 appClient.config(function($stateProvider) {
     $stateProvider.state('movies', { // state for showing all movies
         url: '/movies',
-        templateUrl: '/www/client/views/partials/movies.html',
+        templateUrl: '/client/views/partials/movies.html',
         controller: 'MovieListController'
     }).state('viewMovie', { //state for showing single movie
         url: '/movies/:id/view',
-        templateUrl: '/www/client/views/partials/movie-view.html',
+        templateUrl: '/client/views/partials/movie-view.html',
         controller: 'MovieViewController'
     }).state('newMovie', { //state for adding a new movie
         url: '/movies/new',
-        templateUrl: '/www/client/views/partials/movie-add.html',
+        templateUrl: '/client/views/partials/movie-add.html',
         controller: 'MovieCreateController'
     }).state('editMovie', { //state for updating a movie
         url: '/movies/:id/edit',
-        templateUrl: '/www/client/views/partials/movie-edit.html',
+        templateUrl: '/client/views/partials/movie-edit.html',
         controller: 'MovieEditController'
     }).state("otherwise", { url : '/movies'})
 }).run(function($state) {

@@ -3,9 +3,14 @@
 
         <a href="#/movies/new" class="button button-positive button-block">Add New Movie</a>
 
-        <ion-list ng-repeat="movie in movies">
-                <ion-item  href="#/movies/{{movie._id}}/edit">{{movie.title}}</ion-item>
+        <ion-list ng-repeat="movie in movies" >
+                <ion-item  type="item-text-wrap" class="item-avatar" href="#/movies/{{movie._id}}/edit">
+            <img src="/pics/{{movie.director}}"/>
+
+            <p>{{movie.title}}</p>
+                </ion-item>
         </ion-list>
+
 
     </ion-content>
 </ion-view>
